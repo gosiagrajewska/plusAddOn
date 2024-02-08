@@ -1,0 +1,8 @@
+.container {
+  width: 500px;
+}
+
+.time-display {
+  display: flex;
+  justify-content: space-between;
+}
