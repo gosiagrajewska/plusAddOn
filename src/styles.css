@@ -1,8 +1,73 @@
+body {
+  background-color: #fbf3ed;
+  font-family: Dosis, sans-serif;
+}
 .container {
   width: 500px;
+  margin: 0 auto;
+  background: white;
+  padding: 30px;
+  box-shadow: 0 30px 50px rgba(65, 50, 100, 0.08);
+  border-radius: 16px;
 }
 
 .time-display {
   display: flex;
   justify-content: space-between;
+  /*margin: 20px 0;*/
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.2);
+}
+.time-display:last-child {
+  border-bottom: none;
+}
+.time-display small {
+  font-size: 18px;
+}
+.city {
+  padding-top: 10px;
+}
+.time {
+  font-size: 42px;
+  padding: 10px;
+  margin: 0;
+}
+.date {
+  opacity: 0.7;
+  font-size: 18px;
+  text-align: left;
+  margin: 0;
+  padding: 10px 0;
+}
+a {
+  text-decoration: none;
+  color: #958ec0;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 42px;
+}
+
+h2 {
+  margin: 0;
+}
+footer {
+  text-align: center;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  padding-top: 20px;
+}
+footer strong {
+  font-weight: normal;
+  color: #958ec0;
+}
+select {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-family: Dosis, sans-serif;
+  border-radius: 3px;
 }
