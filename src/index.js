@@ -49,7 +49,7 @@ function updateCity(event) {
           <div>
             <p class="time">${cityTime} </p>
           </div>
-          <br/>
+          </div>
           <a href="/">All cities</a>
   `;
 }
