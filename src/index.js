@@ -24,13 +24,28 @@ function updateTime() {
       "h:mm:ss [<small>]A[</small>]"
     );
   }
-}
+  //Tokyo
+  let tokyoElement = document.querySelector("#tokyo");
+  if (tokyoElement) {
+    let tokyoDateElement = tokyoElement.querySelector(".date");
+    let tokyoTimeElement = tokyoElement.querySelector(".time");
+    let tokyoTime = moment().tz("Asia/Tokyo");
 
+    tokyoDateElement.innerHTML = tokyoTime.format("MMMM Do YYYY");
+    tokyoTimeElement.innerHTML = tokyoTime.format(
+      "h:mm:ss [<small>]A[</small>]"
+    );
+  }
+}
+let cityTimeZone;
 function updateCity(event) {
-  let cityTimeZone = event.target.value;
+  cityTimeZone = event.target.value;
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
   }
+  updateCityTime();
+}
+function updateCityTime() {
   let cityDate = moment().tz(cityTimeZone).format("MMMM Do YYYY");
   let cityTime = moment()
     .tz(cityTimeZone)
@@ -39,6 +54,7 @@ function updateCity(event) {
     cityTimeZone = "America/New York";
   }*/
   let cityName = cityTimeZone.replace("_", " ").split("/")[1];
+
   let citiesElement = document.querySelector("#cities");
   citiesElement.innerHTML = `
   <div class="time-display" >
@@ -54,6 +70,7 @@ function updateCity(event) {
           <a href="/">All cities</a>
   `;
 }
+setInterval(updateCityTime, 1000);
 
 updateTime();
 setInterval(updateTime, 1000);
