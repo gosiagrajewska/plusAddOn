@@ -27,11 +27,7 @@ function updateTime() {
 }
 
 function updateCity(event) {
-  console.log("Here");
-
   let cityTimeZone = event.target.value;
-  console.log(cityTimeZone);
-
   let cityDate = moment().tz(cityTimeZone).format("MMMM Do YYYY");
   let cityTime = moment()
     .tz(cityTimeZone)
