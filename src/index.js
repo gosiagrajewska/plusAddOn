@@ -50,6 +50,7 @@ function updateCity(event) {
             <p class="time">${cityTime} </p>
           </div>
           </div>
+          <br/>
           <a href="/">All cities</a>
   `;
 }
