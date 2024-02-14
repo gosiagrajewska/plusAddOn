@@ -47,7 +47,8 @@ function updateCity(event) {
     updateCityTime();
   } else {
     let citiesElement = document.querySelector("#cities");
-    citiesElement.innerHTML = ``;
+    citiesElement.innerHTML = `<br/>
+          <a href="/">All cities</a>`;
   }
 }
 function updateCityTime() {
