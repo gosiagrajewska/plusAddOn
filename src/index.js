@@ -43,8 +43,12 @@ function updateCity(event) {
   if (cityTimeZone === "current") {
     cityTimeZone = moment.tz.guess();
   }
-
-  updateCityTime();
+  if (cityTimeZone) {
+    updateCityTime();
+  } else {
+    let citiesElement = document.querySelector("#cities");
+    citiesElement.innerHTML = ``;
+  }
 }
 function updateCityTime() {
   let cityDate = moment().tz(cityTimeZone).format("MMMM Do YYYY");
